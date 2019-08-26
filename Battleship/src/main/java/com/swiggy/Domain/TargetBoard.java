@@ -1,12 +1,14 @@
 package com.swiggy.Domain;
 
-public class TargetBoard extends Board {
+public class TargetBoard implements Board {
 
-    String boardType() {
+    private final int boardSize;
+
+    public String boardType() {
         return "TARGET";
     }
 
     public TargetBoard(Integer size){
-        super(size);
+        this.boardSize = size;
     }
 }

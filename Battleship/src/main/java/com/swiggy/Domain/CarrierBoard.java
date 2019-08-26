@@ -3,19 +3,24 @@ package com.swiggy.Domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CarrierBoard extends Board {
+
+public class CarrierBoard implements Board {
 
     private List<Ship> shipList = new ArrayList<>();
 
     private TargetBoard targetBoard = null;
 
-    CarrierBoard(int size){
-        super(size);
+    public CarrierBoard(int size){
         targetBoard = new TargetBoard(size);
     }
 
-    String boardType() {
+    @Override
+    public String boardType() {
         return "CARRIER";
+    }
+
+    public TargetBoard getTargetBoard() {
+        return targetBoard;
     }
 
     public void addShip(Ship ship){

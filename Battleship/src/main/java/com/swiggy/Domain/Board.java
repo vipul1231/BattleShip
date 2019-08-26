@@ -1,12 +1,8 @@
 package com.swiggy.Domain;
 
-public abstract class Board {
+public interface Board {
 
-        private int boardSize;
+     String boardType();
 
-        abstract String boardType();
-
-        Board(Integer size){
-                this.boardSize = size;
-        }
+     default void addShip(Ship ship){ };
 }
