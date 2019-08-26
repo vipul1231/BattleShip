@@ -2,7 +2,7 @@ package com.swiggy.Domain;
 
 import java.util.List;
 
-public class Players {
+public class Player {
 
     List<Game> gamesPlayed;
 
